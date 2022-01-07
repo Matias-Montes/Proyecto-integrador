@@ -96,7 +96,7 @@ ul {
 }
 
 .nav_ul-link {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #555555;
 }
 
@@ -125,7 +125,7 @@ ul {
 
 
 .main_container {
-  height: 100vh;
+  height: 130vh;
   width: 100%;
   background-image: url(/imagenes/fondo_main.jpg);
   background-size: cover ;
@@ -137,8 +137,7 @@ ul {
 }
 
 .main_title {
-  position: relative;
-  top: 0;
+
  	-webkit-animation: puff-in-top 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
 	        animation: puff-in-top 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
   animation-duration: 1s;
@@ -152,21 +151,40 @@ ul {
 }
 
 .main_div-container h3 {
-  margin: 50px;
+  margin: 30px;
 }
 
 .main_div-container-p {
   display: flex;
-  height: 50%;
+  height: auto;
+  width: auto;
   flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  border-radius: 40px;
+ 
+    
+}
+
+.p1 {
+  
+  margin: 30px 0 20px 0;
   
 }
 
 
 
-
 /*Editar login.css*/
+
+.form-background {
+  height: 100vh;
+  width: 100%;
+  background-image: url(/imagenes/fondo_main.jpg);
+  background-size: cover ;
+  background-repeat: no-repeat;
+}
 
 .subtitle {
   display: flex;
@@ -180,8 +198,10 @@ ul {
 
 .container_form {
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    padding: 5px;
+    padding: 0 200px;
+    
   }
   
   
@@ -231,7 +251,76 @@ ul {
     float: right;
     padding-top: 16px;
   }
- 
+
+/*  Editar Registro */
+
+.registro {
+  position: relative;
+  top: 60px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: url(/imagenes/fondo_main.jpg);
+  background-size: cover ;
+  background-repeat: no-repeat;
+}
+
+.registro_img {
+  height: 100%;
+  width: 45%;
+  background-image: url(/imagenes/pastel_coloured_watercolour_texture_background_2608.jpg);
+  opacity: .7;
+  background-size: cover ;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.registro_texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, .5);
+  height: 100%;
+  width: 45%;
+  font-size: 2rem;
+  padding: 10px;
+  
+  
+}
+
+.contact_text{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40%;
+    width: 100%;
+
+  
+}
+
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60%;
+  width: 90%;
+
+}
+
+.text_area {
+  resize: none;
+  height: 100px;
+  width: 100%;
+}
+.contact_input {
+  display: block;
+  width: 100%;
+  height: 40px;
+}
 
 /* Animaciones */
 
@@ -387,40 +476,81 @@ ul {
 
 
 /* Media Queries */
-@media (max-width:374px) {
-  .nav_ul-link {
-  font-size: 1.2rem;
+
+@media (min-width:990px) {
+  .container_form {
+    margin: 0 250px;
+   
+  }
+
+}
+
+@media (max-width:990px) {
+  h1 {
+    font-size: 5.5rem;
+    text-align: center;   
+  }
+h2 {
+  font-size: 4.5rem;
+}
+  .main_container {
+  margin-top: 60px;
+  justify-content: start;
+}
+  .main_title {
+    margin-top: 60px;
   }
 }
+.subtitle {
+  margin-top: 50px;
+}
+.container_form {
+  padding: 50px 80px;
+ 
+}
+
+@media (max-width:720px) {
+
+.main_div-container {
+  margin-top: 50px;  
+  font-size: 1.5rem;
+}
+
+h2 {
+ font-size: 3.5rem;
+ 
+}
+
+@media (max-width:510px) {
+
+  h1 {
+    font-size: 4rem;
+  }
+}
+
 @media (max-width:461px) {
+
+  h2 {
+    font-size: 2rem;
+    margin-top: 60px;
+  }
 
   .navbar {
     justify-content: center;
+    
   }
   .nav_left {
     display: none;
   }
-
-}
-@media (min-width:200px) and (max-width:767px) {
-
-  h1 {
-    font-size: 4rem;
-    text-align: center;   
-  }
   .main_div-container {
-    
-    font-size: 1.5rem;
-}
-
-}
-
-
-@media (min-width:990px) {
-  .container_form {
-    margin: 0 80px;
-
+   font-size: 1.2rem;
   }
-
-
+  .container_form {
+    margin-top: 100px;
+    padding: 10px;
+  }
 }
+.nav_ul-link {
+  font-size: 1.2rem;
+}
+
