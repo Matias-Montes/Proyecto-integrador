@@ -37,30 +37,35 @@
       </div>
       
       <div class="registro_texto">
-        <dir class="contact_text">
+        <div class="contact_text">
           <h3>NOS ENCANTARÍA SABER DE TU NEGOCIO</h3>
-
+        </div>
+        <div>
           <p>Enviamos un mensaje por medio de nuestro formulario de contacto</p>
           <p>Te invitamos a tener una reunión en nuestra oficina y hablar mas en detalle sobre tu negocio o proyecto</p>
-        </dir>
+        </div>
         <form class="contact_form">
-          <label for="nombre">Nombre:*
-            <input class="contact_input" type="text" name="nombre" id="nombre">
-          </label>
-
-          <label for="email">Email:*
-            <input class="contact_input" type="email" name="email" id="email">
-          </label>
-
-          <label for="telefono">Telefono:
-            <input class="contact_input" type="number" name="telefono" id="telefono">
-          </label>
-          
-        <fieldset id="footer_form-container">
+          <fieldset class="fieldset">
             <legend>Dejanos tu mensaje</legend>
-            <textarea class="text_area">Escribe aqui</textarea>
+            <p class="contact_obligatorios">Los campos con * son obligatorios  </p>
+            <label for="nombre">Nombre:*
+              <input class="contact_input" type="text" name="nombre" id="nombre" placeholder=" escribe aqui" required>
+            </label>
+
+            <label for="email">Email:*
+              <input class="contact_input" type="email" name="email" id="email" placeholder=" escribe aqui" required>
+            </label>
+
+            <label for="telefono">Telefono:
+              <input class="contact_input" type="number" name="telefono" id="telefono" placeholder=" escribe aqui">
+            </label>
+          
+        
+            <label>Escribe tu comentario:
+            <textarea class="text_area" placeholder=" escribe aqui"></textarea>
             <button type="submit" class="footer_button">Enviar</button>
-        </fieldset>
+            </label>
+          </fieldset>
 
 
         </form>
