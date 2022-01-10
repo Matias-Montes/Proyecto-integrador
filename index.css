@@ -51,12 +51,22 @@ a {
 }
 
 a:hover {
-  -webkit-animation: scale-up-ver-center 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-  animation: scale-up-ver-center 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  background: antiquewhite;
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 12px 12px 20px 5px rgba(255,255,255,0);
+  transition: 1s;
+
 }
 
 ul {
   list-style: none;
+}
+
+textarea:focus::placeholder {
+  color: transparent;  
+}
+
+input:focus::placeholder {
+  color: transparent;
 }
 /* Editar el nav */
 
@@ -68,55 +78,45 @@ ul {
   left: 0;
   height: 60px;
   width: 100%;
-  background-color: #f9cdc2;  
+  background-color: #f9cdc2 !important;  
   z-index: 10;
   border-bottom: 3px solid black;
+ 
 }
 
-.nav_left img{
-  max-height: 110px;
-  margin-top: -20px;
+.navbar-brand {
+margin: 10px;
 }
 
-.nav_right {
-  display: flex;
-  justify-content: end;
-  align-items: center; 
+.navbar-toggler {
+  width: 40px;
+  background: white;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  padding: 2px;
 }
 
-.nav_ul-li{
-  display: inline-block;
-  margin: 20px;
+.navbar-toggler-icon {
+  
 }
 
-.nav_ul-link {
-  font-size: 1.3rem;
-  color: #555555;
+.navbar-collapse {
+  background-color: #f9cdc2;
+border-radius: 10px;
 }
 
-.nav_ul-link:hover {
-  -webkit-animation: text-pop-up-br 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: text-pop-up-br 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-} 
-
-.link-active {
-  color: #000000;
-  text-shadow: #ffffec;
-}
-
-.Section_Imag {
-  width: 100%;
-  height: 100vh;
-}
-
-.Section_Contact {
-  width: 100%;
-  height: 100vh;
+.nav-link {
+  background: white;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
 }
 
 /* editar main */
 
-.main_container {
+#main_container {
   height: 130vh;
   width: 100%;
   background-image: url(/imagenes/fondo_main.jpg);
@@ -163,7 +163,7 @@ ul {
 
 /* Editar seccion img */
 
-.section_imag {
+#section_imag {
   height: 100vh;
   width: 100%;
   display: flex;
@@ -251,26 +251,31 @@ ul {
 .cliente_1:hover {
   transform:scale(1.5);
   border-radius: 30px;
+  transition: 1s;
 }
 
 .cliente_2:hover {
   transform:scale(1.5);
   border-radius: 30px;
+  transition: 1s;
 }
 
 .cliente_3:hover {
   transform:scale(1.5);
   border-radius: 30px;
+  transition: 1s;
 }
 
 .cliente_4:hover {
   transform:scale(1.5);
   border-radius: 30px;
+  transition: 1s;
 }
 
 /*Editar login.css*/
 
 .form-background {
+  top: 60px;
   height: 100vh;
   width: 100%;
   background-image: url(/imagenes/fondo_main.jpg);
@@ -292,7 +297,7 @@ ul {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 0 200px;
+    padding: 0 10vw;
   }
   
   .form_imput {
@@ -351,8 +356,8 @@ ul {
   display: flex;
   justify-content: center;
   background-image: url(/imagenes/fondo_main.jpg);
-  background-size: cover ;
-  background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: ;
 }
 
 .registro_img {
@@ -392,6 +397,15 @@ ul {
   height: 60%;
   width: 90%;
 
+}
+
+.text_area {
+  padding: 5px;
+}
+
+.contact_input {
+  padding: 5px;
+  font-size: 1rem;
 }
 
 .text_area {
@@ -511,27 +525,6 @@ ul {
   }
 }
 
-@-webkit-keyframes scale-up-ver-center {
-  0% {
-    -webkit-transform: scaleY(0.4);
-            transform: scaleY(0.4);
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-}
-
-@keyframes scale-up-ver-center {
-  0% {
-    -webkit-transform: scaleY(0.4);
-            transform: scaleY(0.4);
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-            transform: scaleY(1);
-  }
-}
 
 @-webkit-keyframes text-pop-up-br {
   0% {
@@ -596,6 +589,10 @@ ul {
     font-size: 4.5rem;
   }
 
+  .navbar-brand {
+    margin: 0;
+    }
+
   .main_container {
     margin-top: 60px;
     justify-content: start;
@@ -607,6 +604,18 @@ ul {
   
   .subtitle {
     margin-top: 50px;
+  }
+
+  .form-background {
+    height: 120%;
+  }
+
+  .registro {
+    height: 250vh;
+  }
+
+  .registro_texto {
+    height: 100%;
   }
 
   .container_form {
